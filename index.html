@@ -290,24 +290,26 @@
       text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.3);
     }
 
-    /* ─── FIXED: FULLY ROUNDED DOTTED BORDER ─── */
+    /* ─── FIXED: DASHED BORDER PERFECTLY ALIGNED TO THE PICTURE ─── */
     .pic-frame {
-      background: rgba(243, 237, 228, 0.6);
-      border-radius: 40px;
-      padding: 0.8rem;
-      margin: 0.3rem 0 0.2rem;
+      display: inline-block;
+      padding: 6px;
       border: 2px dashed rgba(74, 124, 89, 0.7);
+      border-radius: 40px;
+      background: rgba(243, 237, 228, 0.3);
       box-shadow: inset 0 4px 12px rgba(74, 124, 89, 0.1);
       backdrop-filter: blur(4px);
-      overflow: hidden;
+      max-width: 100%;
+      margin: 0.3rem auto 0.2rem;
     }
 
     .pic-frame img {
+      display: block;
       width: 100%;
-      border-radius: 30px;
+      max-width: 100%;
       max-height: 200px;
       object-fit: cover;
-      display: block;
+      border-radius: 34px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
       transition: transform 0.3s ease;
     }
@@ -436,11 +438,12 @@
         font-size: 1.4rem;
       }
       .pic-frame {
-        padding: 0.5rem;
+        padding: 4px;
+        border-radius: 30px;
       }
       .pic-frame img {
         max-height: 150px;
-        border-radius: 20px;
+        border-radius: 26px;
       }
     }
   </style>
@@ -470,13 +473,14 @@
             <div class="welcome-text">WELCOME TO THE JUNGLE</div>
             <div class="one-text">ONE</div>
 
-            <!-- ─── FIXED: FULLY ROUNDED DOTTED BORDER ─── -->
+            <!-- ─── DASHED BORDER PERFECTLY ALIGNED TO THE PICTURE ─── -->
             <div class="pic-frame">
               <img src="2.jpg" alt="Baby Matthias" />
             </div>
 
             <div class="godparent-note">
               <i class="fas fa-hands-praying"></i>
+              <span>We look forward to your presence, <strong>Ninong &amp; Ninang</strong></span>
               <i class="fas fa-feather-alt"></i>
             </div>
           </div>
