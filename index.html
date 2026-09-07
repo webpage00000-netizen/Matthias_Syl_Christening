@@ -113,7 +113,7 @@
     }
 
     .envelope.open {
-      min-height: 480px;
+      min-height: 520px;
       background: #dfc9b0;
       background-image: radial-gradient(circle at 20% 30%, #eddccb, #cbb29b);
       border-radius: 28px 28px 18px 18px;
@@ -264,24 +264,47 @@
       font-family: 'Georgia', serif;
       color: #2d4a35;
       letter-spacing: 2px;
-      margin: 0.1rem 0 0.6rem;
+      margin: 0.1rem 0 0.3rem;
       line-height: 1.2;
       text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.4);
     }
 
+    .invite-content-inner .welcome-text {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #4a7c59;
+      letter-spacing: 3px;
+      margin: 0.1rem 0 0.4rem;
+      text-transform: uppercase;
+      font-family: 'Georgia', serif;
+      text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.3);
+    }
+
+    .invite-content-inner .one-text {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #2d4a35;
+      letter-spacing: 8px;
+      margin: 0.1rem 0 0.3rem;
+      font-family: 'Georgia', serif;
+      text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.3);
+    }
+
+    /* ─── FIXED: FULLY ROUNDED DOTTED BORDER ─── */
     .pic-frame {
       background: rgba(243, 237, 228, 0.6);
-      border-radius: 60px 60px 30px 30px;
-      padding: 0.8rem 0.6rem 0.6rem;
+      border-radius: 40px;
+      padding: 0.8rem;
       margin: 0.3rem 0 0.2rem;
-      border: 2px dashed rgba(74, 124, 89, 0.6);
+      border: 2px dashed rgba(74, 124, 89, 0.7);
       box-shadow: inset 0 4px 12px rgba(74, 124, 89, 0.1);
       backdrop-filter: blur(4px);
+      overflow: hidden;
     }
 
     .pic-frame img {
       width: 100%;
-      border-radius: 40px;
+      border-radius: 30px;
       max-height: 200px;
       object-fit: cover;
       display: block;
@@ -294,7 +317,7 @@
     }
 
     .godparent-note {
-      margin: 0.8rem 0 0.1rem;
+      margin: 0.6rem 0 0.1rem;
       font-size: 0.95rem;
       color: #2d4a35;
       font-weight: 500;
@@ -393,20 +416,31 @@
       .invite-content-inner .baby-name {
         font-size: 1.8rem;
       }
+      .invite-content-inner .welcome-text {
+        font-size: 0.9rem;
+      }
+      .invite-content-inner .one-text {
+        font-size: 1.2rem;
+        letter-spacing: 6px;
+      }
       .envelope {
         max-width: 350px;
         min-height: 280px;
       }
       .envelope.open {
-        min-height: 430px;
+        min-height: 460px;
       }
       .envelope-seal {
         width: 40px;
         height: 40px;
         font-size: 1.4rem;
       }
+      .pic-frame {
+        padding: 0.5rem;
+      }
       .pic-frame img {
         max-height: 150px;
+        border-radius: 20px;
       }
     }
   </style>
@@ -433,13 +467,16 @@
             </div>
             <div class="baby-name">Matthias Syl S. Jarlego</div>
 
+            <div class="welcome-text">WELCOME TO THE JUNGLE</div>
+            <div class="one-text">ONE</div>
+
+            <!-- ─── FIXED: FULLY ROUNDED DOTTED BORDER ─── -->
             <div class="pic-frame">
               <img src="2.jpg" alt="Baby Matthias" />
             </div>
 
             <div class="godparent-note">
               <i class="fas fa-hands-praying"></i>
-              <span>We look forward to your presence, <strong>Ninong &amp; Ninang</strong></span>
               <i class="fas fa-feather-alt"></i>
             </div>
           </div>
@@ -448,7 +485,7 @@
     </div>
 
     <div class="click-hint" id="clickHint">
-      <i class="fas fa-hand-pointer"></i> click the envelope to open
+      <i class="fas fa-search"></i> click the envelope to open
     </div>
     <div class="click-hint-close">
       <i class="fas fa-chevron-up"></i> click the envelope to close
