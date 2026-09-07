@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Baptismal Invitation · Matthias Syl S. Jarlego</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
   <style>
     * {
       margin: 0;
@@ -35,7 +35,6 @@
       overflow: hidden;
     }
 
-    /* Decorative leaf corners */
     .card::before {
       content: "🌿";
       position: absolute;
@@ -78,7 +77,7 @@
       background: #dfc9b0;
       background-image: radial-gradient(circle at 20% 30%, #eddccb, #cbb29b);
       border-radius: 28px 28px 18px 18px;
-      box-shadow: 0 12px 0 #8b6f5a, 0 18px 24px rgba(0,0,0,0.25);
+      box-shadow: 0 12px 0 #8b6f5a, 0 18px 24px rgba(0, 0, 0, 0.25);
       transition: all 0.35s cubic-bezier(0.34, 1.2, 0.64, 1);
       display: flex;
       align-items: center;
@@ -113,12 +112,12 @@
       pointer-events: none;
     }
 
-    /* When open, expand the envelope */
     .envelope.open {
-      min-height: 520px;
-      background: #f2e3d4;
+      min-height: 480px;
+      background: #dfc9b0;
+      background-image: radial-gradient(circle at 20% 30%, #eddccb, #cbb29b);
       border-radius: 28px 28px 18px 18px;
-      box-shadow: 0 8px 0 #8b6f5a, 0 20px 30px rgba(0,0,0,0.25);
+      box-shadow: 0 8px 0 #8b6f5a, 0 20px 30px rgba(0, 0, 0, 0.25);
       border-color: #a0816a;
       max-height: none;
       height: auto;
@@ -154,7 +153,7 @@
       align-items: center;
       justify-content: center;
       font-size: 1.8rem;
-      box-shadow: 0 3px 0 #2d5a3d, 0 6px 12px rgba(0,0,0,0.2);
+      box-shadow: 0 3px 0 #2d5a3d, 0 6px 12px rgba(0, 0, 0, 0.2);
       z-index: 5;
       border: 2px solid #6a9f7a;
       transition: all 0.4s ease;
@@ -162,7 +161,7 @@
     }
 
     .envelope-seal i {
-      filter: drop-shadow(0 2px 2px rgba(0,0,0,0.2));
+      filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.2));
     }
 
     .envelope-text {
@@ -200,7 +199,7 @@
       border: 2px solid #7a5c42;
       border-top: none;
       opacity: 1;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       z-index: 0;
       pointer-events: none;
     }
@@ -222,7 +221,7 @@
       align-items: center;
       justify-content: center;
       width: 100%;
-      padding: 0.2rem;
+      padding: 1.2rem 1rem;
       z-index: 4;
       position: relative;
       background: transparent;
@@ -233,79 +232,25 @@
       display: flex;
     }
 
-    /* Blur overlay behind the invitation content */
-    .invitation-blur {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(242, 227, 212, 0.6);
-      backdrop-filter: blur(6px);
-      -webkit-backdrop-filter: blur(6px);
-      border-radius: 24px 24px 18px 18px;
-      opacity: 0;
-      transition: opacity 0.5s ease;
-      z-index: 1;
-      pointer-events: none;
-    }
-
-    .envelope.open .invitation-blur {
-      opacity: 1;
-    }
-
-    /* --- FIXED CENTERING FOR THE WHITE CARD --- */
-    .invite-card {
-      background: linear-gradient(145deg, #ffffff, #f5f7f0);
-      padding: 1.8rem 1.5rem 2rem;
-      border-radius: 40px 40px 28px 28px;
-      width: 90%;
-      box-shadow: inset 0 1px 8px rgba(74, 124, 89, 0.15), 0 12px 18px -8px rgba(40, 60, 30, 0.2);
-      border: 2px solid #4a7c59;
+    /* ─── CONTENT INSIDE BROWN ENVELOPE ─── */
+    .invite-content-inner {
+      width: 100%;
       text-align: center;
-      position: relative;
-      z-index: 2;
-      animation: fadeSlide 0.5s ease;
-      margin: 0 auto;
-      align-self: center;
+      color: #3d2e1e;
+      padding: 0.2rem;
     }
 
-    /* Safari leaf decoration */
-    .invite-card::before {
-      content: "🌿";
-      position: absolute;
-      top: -8px;
-      left: 15px;
-      font-size: 2rem;
-      opacity: 0.3;
-    }
-
-    .invite-card::after {
-      content: "🌿";
-      position: absolute;
-      bottom: -8px;
-      right: 15px;
-      font-size: 2rem;
-      opacity: 0.3;
-      transform: scaleX(-1);
-    }
-
-    @keyframes fadeSlide {
-      0% { opacity: 0; transform: translateY(12px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
-
-    .invite-card .join-us {
-      font-size: 1.4rem;
+    .invite-content-inner .join-us {
+      font-size: 1.2rem;
       font-weight: 500;
       color: #2b1f14;
       letter-spacing: 1px;
-      line-height: 1.4;
+      line-height: 1.5;
       margin: 0.2rem 0 0.3rem;
       font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
     }
 
-    .invite-card .join-us span {
+    .invite-content-inner .join-us span {
       display: inline-block;
       background: #4a7c59;
       padding: 0.1rem 0.8rem;
@@ -314,80 +259,58 @@
       font-weight: 600;
     }
 
-    .invite-card .baby-name {
+    .invite-content-inner .baby-name {
       font-size: 2.4rem;
       font-weight: 700;
       font-family: 'Georgia', serif;
       color: #2d4a35;
       letter-spacing: 2px;
-      margin: 0.2rem 0 0.5rem;
+      margin: 0.1rem 0 0.6rem;
       line-height: 1.2;
-      text-shadow: 1px 1px 2px rgba(74, 124, 89, 0.1);
+      text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.4);
     }
 
     .pic-frame {
-      background: #f3ede4;
+      background: rgba(243, 237, 228, 0.6);
       border-radius: 60px 60px 30px 30px;
-      padding: 1rem 0.8rem 0.8rem;
-      margin: 0.5rem 0 0.3rem;
-      border: 2px dashed #4a7c59;
+      padding: 0.8rem 0.6rem 0.6rem;
+      margin: 0.3rem 0 0.2rem;
+      border: 2px dashed rgba(74, 124, 89, 0.6);
       box-shadow: inset 0 4px 12px rgba(74, 124, 89, 0.1);
+      backdrop-filter: blur(4px);
     }
 
-    .pic-placeholder {
-      background: #e6d7c4;
+    .pic-frame img {
+      width: 100%;
       border-radius: 40px;
-      min-height: 120px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      color: #6f543b;
-      font-weight: 400;
-      border: 2px solid #d6bea8;
-      padding: 0.8rem 0.5rem;
-      transition: 0.2s;
+      max-height: 200px;
+      object-fit: cover;
+      display: block;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease;
     }
 
-    .pic-placeholder i {
-      font-size: 3.5rem;
-      color: #4a7c59;
-      margin-bottom: 0.2rem;
-      opacity: 0.7;
-    }
-
-    .pic-placeholder span {
-      background: #f1e4d4;
-      padding: 0.2rem 1.2rem;
-      border-radius: 40px;
-      font-size: 0.8rem;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: #4c3825;
-      border: 1px solid #d4bb9f;
-    }
-
-    .pic-placeholder .pic-label {
-      font-size: 0.7rem;
-      letter-spacing: 3px;
-      margin-top: 4px;
-      opacity: 0.8;
-      font-weight: 300;
+    .pic-frame img:hover {
+      transform: scale(1.01);
     }
 
     .godparent-note {
       margin: 0.8rem 0 0.1rem;
-      font-size: 0.9rem;
-      color: #4a7c59;
+      font-size: 0.95rem;
+      color: #2d4a35;
       font-weight: 500;
       letter-spacing: 1px;
-      border-top: 2px solid #4a7c59;
+      border-top: 2px solid rgba(74, 124, 89, 0.6);
       padding-top: 0.6rem;
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 8px;
       flex-wrap: wrap;
+      background: rgba(255, 242, 225, 0.25);
+      padding: 0.5rem 1rem;
+      border-radius: 40px;
+      backdrop-filter: blur(4px);
     }
 
     .godparent-note i {
@@ -397,7 +320,7 @@
 
     .godparent-note strong {
       font-weight: 700;
-      color: #2d4a35;
+      color: #1f3a26;
     }
 
     .click-hint {
@@ -422,105 +345,149 @@
       animation: pulse 2s infinite;
     }
 
-    /* Hide the hint when envelope is open */
+    .click-hint-close {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      margin: 0.8rem 0 0.2rem;
+      font-size: 0.8rem;
+      color: #8b6f5a;
+      background: rgba(139, 111, 90, 0.15);
+      padding: 0.3rem 1.2rem;
+      border-radius: 30px;
+      border: 1px solid #8b6f5a;
+      transition: all 0.3s ease;
+      letter-spacing: 0.5px;
+    }
+
+    .envelope.open ~ .click-hint-close {
+      display: flex;
+    }
+
     .envelope.open ~ .click-hint {
       display: none;
     }
 
     @keyframes pulse {
-      0% { transform: scale(1); opacity: 0.8; }
-      50% { transform: scale(1.1); opacity: 1; }
-      100% { transform: scale(1); opacity: 0.8; }
+      0% {
+        transform: scale(1);
+        opacity: 0.8;
+      }
+      50% {
+        transform: scale(1.1);
+        opacity: 1;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 0.8;
+      }
     }
 
     @media (max-width: 550px) {
-      .card { padding: 1.5rem 1.2rem 2rem; }
-      .invite-card .join-us { font-size: 1.1rem; }
-      .invite-card .baby-name { font-size: 1.8rem; }
-      .envelope { max-width: 350px; min-height: 280px; }
-      .envelope.open { min-height: 460px; }
-      .envelope-seal { width: 40px; height: 40px; font-size: 1.4rem; }
-      .pic-placeholder i { font-size: 2.5rem; }
-      .pic-placeholder { min-height: 90px; }
-      .invite-card { width: 92%; padding: 1.2rem 0.8rem 1.5rem; }
+      .card {
+        padding: 1.5rem 1.2rem 2rem;
+      }
+      .invite-content-inner .join-us {
+        font-size: 1.0rem;
+      }
+      .invite-content-inner .baby-name {
+        font-size: 1.8rem;
+      }
+      .envelope {
+        max-width: 350px;
+        min-height: 280px;
+      }
+      .envelope.open {
+        min-height: 430px;
+      }
+      .envelope-seal {
+        width: 40px;
+        height: 40px;
+        font-size: 1.4rem;
+      }
+      .pic-frame img {
+        max-height: 150px;
+      }
     }
   </style>
 </head>
 <body>
 
-<div class="card">
-  <div class="envelope-wrapper" id="envelopeWrapper">
-    <div class="envelope" id="envelope">
-      <div class="invitation-blur" id="invitationBlur"></div>
-      
-      <div class="envelope-flap" id="flap"></div>
-      <div class="envelope-seal" id="seal">
-        <i class="fas fa-leaf"></i>
-      </div>
-      <div class="envelope-text" id="closedText">
-        <i class="fas fa-envelope"></i> Ninong & Ninang
-      </div>
+  <div class="card">
+    <div class="envelope-wrapper" id="envelopeWrapper">
+      <div class="envelope" id="envelope">
+        <div class="invitation-blur" id="invitationBlur"></div>
 
-      <div class="invitation-content" id="invitationContent">
-        <div class="invite-card">
-          <div class="join-us">
-            <span>Join us</span> to celebrate the christening of our son
-          </div>
-          <div class="baby-name">Matthias Syl S. Jarlego</div>
+        <div class="envelope-flap" id="flap"></div>
+        <div class="envelope-seal" id="seal">
+          <i class="fas fa-leaf"></i>
+        </div>
+        <div class="envelope-text" id="closedText">
+          <i class="fas fa-envelope"></i> Ninong &amp; Ninang
+        </div>
 
-          <div class="pic-frame">
-            <div class="pic-placeholder" style="padding: 0.3rem;">
-              <img src="2.jpg" alt="Baby Matthias" style="width: 100%; border-radius: 40px; max-height: 200px; object-fit: cover;">
+        <div class="invitation-content" id="invitationContent">
+          <div class="invite-content-inner">
+            <div class="join-us">
+              <span>Join us</span> to celebrate the christening of our son
             </div>
-          </div>
+            <div class="baby-name">Matthias Syl S. Jarlego</div>
 
-          <div class="godparent-note">
-            <i class="fas fa-hands-praying"></i>
-            <span>We look forward to your presence, <strong>Ninong &amp; Ninang</strong></span>
-            <i class="fas fa-feather-alt"></i>
+            <div class="pic-frame">
+              <img
+                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23e6d7c4'/%3E%3Ccircle cx='200' cy='120' r='60' fill='%23f0d5b0'/%3E%3Ccircle cx='170' cy='105' r='8' fill='%233d2e1e'/%3E%3Ccircle cx='230' cy='105' r='8' fill='%233d2e1e'/%3E%3Cpath d='M180 145 Q200 165 220 145' stroke='%233d2e1e' stroke-width='4' fill='none' stroke-linecap='round'/%3E%3Crect x='140' y='200' width='120' height='60' rx='10' fill='%23f5f0e8' stroke='%23d4bb9f' stroke-width='3'/%3E%3Ctext x='200' y='238' text-anchor='middle' font-family='Georgia' font-size='18' fill='%234a7c59' font-weight='bold'%3E%3C%2Ftext%3E%3C%2Fsvg%3E"
+                alt="Baby Matthias"
+              />
+            </div>
+
+            <div class="godparent-note">
+              <i class="fas fa-hands-praying"></i>
+              <span>We look forward to your presence, <strong>Ninong &amp; Ninang</strong></span>
+              <i class="fas fa-feather-alt"></i>
+            </div>
           </div>
         </div>
       </div>
     </div>
+
+    <div class="click-hint" id="clickHint">
+      <i class="fas fa-hand-pointer"></i> click the envelope to open
+    </div>
+    <div class="click-hint-close">
+      <i class="fas fa-chevron-up"></i> click the envelope to close
+    </div>
   </div>
 
-  <div class="click-hint" id="clickHint">
-    <i class="fas fa-hand-pointer"></i> click the envelope to open
-  </div>
-</div>
+  <script>
+    (function() {
+      const envelope = document.getElementById('envelope');
+      const wrapper = document.getElementById('envelopeWrapper');
+      let isOpen = false;
 
-<script>
-  (function() {
-    const envelope = document.getElementById('envelope');
-    const wrapper = document.getElementById('envelopeWrapper');
-    const clickHint = document.getElementById('clickHint');
-    let isOpen = false;
+      function toggleEnvelope(e) {
+        e.stopPropagation();
+        isOpen = !isOpen;
 
-    function toggleEnvelope(e) {
-      e.stopPropagation();
-      isOpen = !isOpen;
-      
-      if (isOpen) {
-        envelope.classList.add('open');
-        clickHint.style.display = 'none';
-      } else {
-        envelope.classList.remove('open');
-        clickHint.style.display = 'flex';
+        if (isOpen) {
+          envelope.classList.add('open');
+        } else {
+          envelope.classList.remove('open');
+        }
       }
-    }
 
-    wrapper.addEventListener('click', toggleEnvelope);
+      wrapper.addEventListener('click', toggleEnvelope);
 
-    wrapper.addEventListener('keydown', function(e) {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        toggleEnvelope(e);
-      }
-    });
-    wrapper.setAttribute('tabindex', '0');
-    wrapper.setAttribute('role', 'button');
-  })();
-</script>
+      wrapper.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          toggleEnvelope(e);
+        }
+      });
+      wrapper.setAttribute('tabindex', '0');
+      wrapper.setAttribute('role', 'button');
+    })();
+  </script>
 
 </body>
 </html>
